@@ -11,7 +11,6 @@ source:
 
 build:
   number: 0
-  skip: true  # [win]
 
 requirements:
   build:
@@ -19,12 +18,14 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - libtool  # [not win]
     - gnuconfig  # [unix]
-    - {{ compiler('c') }}  # [not win]
-    - {{ stdlib("c") }}    # [not win]
+    - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - make  # [not win]
+    - m2-bash  # [win]
+    - m2-make  # [win]
     - pkg-config
-    - autoconf
-    - automake
+    - autoconf  # [not win]
+    - automake  # [not win]
   host:
     - llvm-openmp  # [osx]
     - libgomp      # [linux]
@@ -32,7 +33,7 @@ requirements:
     - pip
     - setuptools
     - cfitsio
-    - wcslib
+    - wcslib  # [not win]
     - gsl
     - libblas  # [linux]
     - astropy-base
@@ -40,7 +41,7 @@ requirements:
     - python
     - numpy
     - cfitsio
-    - wcslib
+    - wcslib  # [not win]
     - gsl
     - libblas  # [linux]
     - astropy-base
