@@ -30,6 +30,7 @@ requirements:
     - m2-grep  # [win]
     - m2-make  # [win]
     - m2-sed  # [win]
+    - m2-which  # [win]
     - pkg-config
     - autoconf  # [not win]
     - automake  # [not win]
