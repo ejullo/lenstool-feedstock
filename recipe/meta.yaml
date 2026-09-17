@@ -21,6 +21,7 @@ requirements:
     - gnuconfig  # [unix]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
+    - autotools_clang_conda  # [win]
     - make  # [not win]
     - m2-bash  # [win]
     - m2-coreutils  # [win]

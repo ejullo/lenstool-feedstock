@@ -1,12 +1,13 @@
-#! /bin/bash
-# Get an updated config.sub and config.guess
-./bootstrap.sh
+#!/usr/bin/env bash
 
 set -ex
 
-./configure --prefix=$PREFIX || { cat config.log ; exit 1 ; }
+./configure --prefix="$PREFIX"
+if [[ "$target_platform" == win-* ]]; then
+    patch_libtool
+fi
 
-make
+make -j"${CPU_COUNT}"
 make install
 
-$PYTHON -m pip install -vv --no-deps --ignore-installed .
+"$PYTHON" -m pip install -vv --no-deps --ignore-installed .
