@@ -6,7 +6,7 @@ export PKG_CONFIG_PATH="$PREFIX/lib/pkgconfig${PKG_CONFIG_PATH:+:$PKG_CONFIG_PAT
 
 ./configure --prefix="$PREFIX" --with-cfitsio-prefix="$PREFIX" || {
     echo "===== config.log files ====="
-    find "$SRC_DIR" -name config.log -print -exec cat {} \;
+    cat config.log
     echo "===== end config.log ====="
     exit 1
 }
