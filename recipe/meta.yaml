@@ -1,5 +1,5 @@
 {% set name = "lenstool" %}
-{% set version = "8.13.1" %}
+{% set version = "8.13.2" %}
 
 
 package:
@@ -8,12 +8,10 @@ package:
 
 source:
   url: https://git-cral.univ-lyon1.fr/{{ name }}/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c237418a34a758aed898c3321891a5a7c752691ce303891e6bb6c46dbe2026a2
-  patches:
-    - patches/0001-avoid-wcsset-name-conflict-on-windows.patch  # [win]
+  sha256: b1172a6259c49fed837904d9271def41920ee7499c836e36f91c6b6d8a06995e
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
