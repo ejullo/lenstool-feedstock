@@ -1,5 +1,5 @@
 diff --git a/src/Bspline.c b/src/Bspline.c
-index 8c76f84..0000000 100644
+index 8c76f84..dummydiff 100644
 --- a/src/Bspline.c
 +++ b/src/Bspline.c
 @@ -19,6 +19,41 @@
