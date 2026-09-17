@@ -9,6 +9,8 @@ package:
 source:
   url: https://git-cral.univ-lyon1.fr/{{ name }}/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: c237418a34a758aed898c3321891a5a7c752691ce303891e6bb6c46dbe2026a2
+  patches:
+    - patches/0001-avoid-wcsset-name-conflict-on-windows.patch  # [win]
 
 build:
   number: 1
