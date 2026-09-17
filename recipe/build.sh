@@ -2,6 +2,8 @@
 
 set -ex
 
+export PKG_CONFIG_PATH="$PREFIX/lib/pkgconfig${PKG_CONFIG_PATH:+:$PKG_CONFIG_PATH}"
+
 ./configure --prefix="$PREFIX"
 if [[ "$target_platform" == win-* ]]; then
     patch_libtool
