@@ -42,6 +42,7 @@ requirements:
     - pip
     - setuptools
     - cfitsio
+    - pthreads-win32  # [win]
     - wcslib  # [not win]
     - gsl
     - libblas  # [linux]

@@ -13,9 +13,11 @@ export PKG_CONFIG_PATH="$PREFIX/lib/pkgconfig${PKG_CONFIG_PATH:+:$PKG_CONFIG_PAT
 
 if [[ "$target_platform" == win-* ]]; then
     patch_libtool
+    make -j"${CPU_COUNT}" LIBS="-lpthread"
+else
+    make -j"${CPU_COUNT}"
 fi
 
-make -j"${CPU_COUNT}"
 make install
 
 "$PYTHON" -m pip install -vv --no-deps --ignore-installed .
