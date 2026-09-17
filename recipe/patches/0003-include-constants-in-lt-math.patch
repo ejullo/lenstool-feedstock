@@ -1,0 +1,13 @@
+diff --git a/src/lt_math.c b/src/lt_math.c
+index 3e7b1a2..4f8c6d0 100644
+--- a/src/lt_math.c
++++ b/src/lt_math.c
+@@ -1,6 +1,7 @@
+ #include<stdio.h>
+ #include<stdlib.h>
+ #include<math.h>
+ #include<float.h>
++#include "constant.h"
+ #include"dimension.h"
+ #include "structure.h"
+ #include "fonction.h"

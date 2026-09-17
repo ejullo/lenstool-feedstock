@@ -12,6 +12,7 @@ source:
   patches:
     - patches/0001-provide-getline-on-windows.patch  # [win]
     - patches/0002-use-wcs-compat-header-on-windows.patch  # [win]
+    - patches/0003-include-constants-in-lt-math.patch
 
 build:
   number: 0
