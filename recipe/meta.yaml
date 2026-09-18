@@ -1,5 +1,5 @@
 {% set name = "lenstool" %}
-{% set version = "8.14.0" %}
+{% set version = "8.14.1" %}
 
 
 package:
@@ -8,12 +8,7 @@ package:
 
 source:
   url: https://git-cral.univ-lyon1.fr/{{ name }}/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2b3bcca5df6d12fd8c6bba0d96b8f9a0fdf8e0da6c04767bb6592d9ec1842a8b
-  patches:
-    - patches/0001-provide-getline-on-windows.patch  # [win]
-    - patches/0002-use-wcs-compat-header-on-windows.patch  # [win]
-    - patches/0003-include-constants-in-lt-math.patch
-    - patches/0004-use-windows-access-header.patch  # [win]
+  sha256: 4e93ca98139cbffa2ddbf3c64cfaba2519d637efe9ce3112a08bc2ce1e8b0cd0
 
 build:
   number: 0
