@@ -14,7 +14,7 @@ export PKG_CONFIG_PATH="$PREFIX/lib/pkgconfig${PKG_CONFIG_PATH:+:$PKG_CONFIG_PAT
 if [[ "$target_platform" == win-* ]]; then
     patch_libtool
 fi
-make -j"${CPU_COUNT}"
+make -j"${CPU_COUNT}" V=1
 
 make install
 
