@@ -4,7 +4,9 @@ set -ex
 
 export PKG_CONFIG_PATH="$PREFIX/lib/pkgconfig${PKG_CONFIG_PATH:+:$PKG_CONFIG_PATH}"
 
-./configure --prefix="$PREFIX" --with-cfitsio-prefix="$PREFIX" || {
+./configure --prefix="$PREFIX" \
+    --with-cfitsio-prefix="$PREFIX" \
+    --with-gsl-prefix="$PREFIX" || {
     echo "===== config.log files ====="
     cat config.log
     echo "===== end config.log ====="
